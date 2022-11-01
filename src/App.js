@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-//const userNames = ['Jesse', 'Tom', 'Anna']
+
 export default class App extends Component {
   state = {
     name: "Rance",
