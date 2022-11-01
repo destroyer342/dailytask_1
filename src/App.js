@@ -7,8 +7,8 @@ export default class App extends Component{
     favoriteColors:['Blue', 'Red', 'Yellow']
   }
 
- renderListOfUserNames = (names) => {
-    return names.map(name => <li>{name}</li>)
+ renderListOfColors = (colors) => {
+    return colors.map(color => <li>{color}</li>)
   }
   handleClick = () => {
     this.setState({
@@ -20,7 +20,7 @@ export default class App extends Component{
     <div>
       <h2>My Favorite Colors:</h2>
       <ul>
-        {this.renderListOfUserNames(this.state.favoriteColors)}
+        {this.renderListOfColors(this.state.favoriteColors)}
       </ul>
       <h2>Hello {this.state.name}</h2>
       <button onClick={this.handleClick}>CLICK ME TO CHANGE NAME</button>
