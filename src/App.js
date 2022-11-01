@@ -2,7 +2,7 @@ import React,{ Component } from "react";
 //const userNames = ['Jesse', 'Tom', 'Anna']
 export default class App extends Component{
   state= {
-    name:'rance',
+    name:'Rance',
     age:25,
     favoriteColors:['Blue', 'Red', 'Yellow']
   }
@@ -12,17 +12,19 @@ export default class App extends Component{
   }
   handleClick = () => {
     this.setState({
-      name:'aubry'
+      name:'Aubry'
     })
   }
   render(){
     return(
     <div>
-      <h2>Hello {this.state.name}</h2>
-      <button onClick={this.handleClick}>CLICK ME TO CHANGE</button>
+      <h2>My Favorite Colors:</h2>
       <ul>
         {this.renderListOfUserNames(this.state.favoriteColors)}
       </ul>
+      <h2>Hello {this.state.name}</h2>
+      <button onClick={this.handleClick}>CLICK ME TO CHANGE NAME</button>
+      
     </div>
     )
   }
