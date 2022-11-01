@@ -3,12 +3,25 @@ import React, { Component } from "react";
 export default class App extends Component {
   state = {
     name: "Rance",
-    age: 25,
-    favoriteColors: ["Blue", "Red", "Yellow"],
+    age: 21,
+    favoriteColors: [
+      {
+        name: "Blue",
+        colorhex:"#0000FF"
+      },
+      { 
+        name: "Red" ,
+        colorhex:"#FF0000"
+      },
+      { 
+        name: "Yellow" ,
+        colorhex:"#FFFF00"
+      }
+    ],
   };
 
   renderListOfColors = (colors) => {
-    return colors.map((color) => <li>{color}</li>);
+    return colors.map((color) => <li>{color.name}</li>);
   };
   handleClick = () => {
     this.setState({
