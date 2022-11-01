@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{ Component } from "react";
+//const userNames = ['Jesse', 'Tom', 'Anna']
+export default class App extends Component{
+  state= {
+    name:'rance',
+    age:25,
+    favoriteColors:['Blue', 'Red', 'Yellow']
+  }
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+ renderListOfUserNames = (names) => {
+    return names.map(name => <li>{name}</li>)
+  }
+  handleClick = () => {
+    this.setState({
+      name:'aubry'
+    })
+  }
+  render(){
+    return(
+    <div>
+      <h2>Hello {this.state.name}</h2>
+      <button onClick={this.handleClick}>CLICK ME TO CHANGE</button>
+      <ul>
+        {this.renderListOfUserNames(this.state.favoriteColors)}
+      </ul>
     </div>
-  );
+    )
+  }
 }
-
-export default App;
